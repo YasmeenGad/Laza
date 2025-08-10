@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String assetsImagesFacebook = 'assets/images/Facebook.svg~';
   static const String fontsInter18ptBold = 'assets/fonts/Inter_18pt-Bold.ttf';
   static const String fontsInter18ptMedium =
       'assets/fonts/Inter_18pt-Medium.ttf';
@@ -11,6 +12,7 @@ class Assets {
       'assets/fonts/Inter_18pt-SemiBold.ttf';
   static const String imagesFacebook = 'assets/images/Facebook.svg';
   static const String imagesGoogle = 'assets/images/Google.svg';
-  static const String imagesLogo = 'assets/images/Logo.svg';
-  static const String imagesManLogo = 'assets/images/manLogo.svg';
+  static const String imagesLogo = 'assets/images/Logo.png';
+  static const String imagesManLogo = 'assets/images/manLogo.png';
+  static const String imagesOnBoarding = 'assets/images/onBoarding.png';
 }
