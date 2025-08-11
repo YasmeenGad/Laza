@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laza/core/config/media_query_config.dart';
+import 'package:laza/core/routes/route_names.dart';
 import 'package:text_responsive/text_responsive.dart';
 
 import '../../../../core/styles/app_colors.dart';
 import '../../../../core/styles/app_text_styles.dart';
+import '../../../../core/utils/widgets/custom_button.dart';
 
 class BottomInfoCard extends StatelessWidget {
   const BottomInfoCard({super.key});
@@ -50,23 +52,13 @@ class BottomInfoCard extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 16.w, right: 16.w),
               child: Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                        color: AppColors.kPrimaryColor,
-                        borderRadius: BorderRadius.circular(10.r),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(15),
-                        child: Center(
-                          child: TextResponsiveWidget(
-                            child: Text(
-                              'Get Started',
-                              style: AppTextStyles.medium17
-                                  .copyWith(color: AppColors.kWhiteColor),
-                            ),
-                          ),
-                        ),
-                      ))),
+                  child: CustomButton(
+                onTap: () {
+                  Navigator.pushReplacementNamed(
+                      context, RouteNames.welcomeView);
+                },
+                text: 'Get Started',
+              )),
             )
           ]),
         ),
