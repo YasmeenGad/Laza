@@ -18,6 +18,10 @@ dependencies:
   flutter_native_splash: ^2.4.4
   flutter_svg: ^2.2.0
   text_responsive: ^1.2.1
+  flutter_localizations:
+    sdk: flutter
+  provider: ^6.1.5
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -37,4 +41,5 @@ flutter:
         - asset: assets/fonts/Inter_18pt-Medium.ttf
         - asset: assets/fonts/Inter_18pt-SemiBold.ttf
         - asset: assets/fonts/Inter_18pt-Bold.ttf
-
+flutter_intl:
+  enabled: true
