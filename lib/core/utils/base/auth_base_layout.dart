@@ -21,7 +21,7 @@ class AuthBaseLayout extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 45.h, left: 25.w),
+          padding: EdgeInsets.only(top: 45.h, left: 20.w),
           child: Column(
             children: [
               Align(
@@ -46,8 +46,11 @@ class AuthBaseLayout extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Center(
-            child: body,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: Center(
+              child: body,
+            ),
           ),
         ),
         Container(

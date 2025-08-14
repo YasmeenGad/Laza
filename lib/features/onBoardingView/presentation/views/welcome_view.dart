@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laza/core/utils/base/auth_base_layout.dart';
+import 'package:laza/features/onBoardingView/presentation/widgets/social_auth_section.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});
@@ -7,9 +8,8 @@ class WelcomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AuthBaseLayout(
-      title: 'Let’s Get Started',
-      buttonText: 'Create an Account',
-      body: Container(color: Colors.black, height: 200, width: 200),
-    );
+        title: 'Let’s Get Started',
+        buttonText: 'Create an Account',
+        body: const SocialAuthSection());
   }
 }
