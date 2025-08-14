@@ -4,6 +4,8 @@ import 'package:laza/core/config/media_query_config.dart';
 
 import '../../styles/app_colors.dart';
 import '../../styles/app_text_styles.dart';
+import '../widgets/auth_base_body.dart';
+import '../widgets/auth_base_header.dart';
 
 class AuthBaseLayout extends StatelessWidget {
   const AuthBaseLayout(
@@ -11,49 +13,25 @@ class AuthBaseLayout extends StatelessWidget {
       required this.title,
       required this.buttonText,
       required this.body,
-      this.footerPrompt});
+      this.footerPrompt,
+      this.showLanguageIcon = false});
 
   final String title, buttonText;
   final Widget body;
   final Widget? footerPrompt;
+  final bool? showLanguageIcon;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Padding(
-          padding: EdgeInsets.only(top: 45.h, left: 20.w),
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: Container(
-                  height: 45.h,
-                  width: 45.w,
-                  decoration: BoxDecoration(
-                      color: AppColors.kLightGreyColor, shape: BoxShape.circle),
-                  child: Icon(Icons.arrow_back),
-                ),
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              Text(
-                title,
-                style: AppTextStyles.semiBold28
-                    .copyWith(color: AppColors.kBlackColor),
-              ),
-            ],
-          ),
+        AuthBaseHeader(
+          title: title,
+          showLanguageIcon: showLanguageIcon,
         ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
-            child: Center(
-              child: body,
-            ),
-          ),
+        AuthBaseBody(
+          body: body,
         ),
         Column(
           spacing: 25.h,

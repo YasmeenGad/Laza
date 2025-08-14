@@ -17,6 +17,7 @@ class WelcomeView extends StatelessWidget {
         actionText: 'Signin',
         onTap: () {},
       ),
+      showLanguageIcon: true,
     );
   }
 }
