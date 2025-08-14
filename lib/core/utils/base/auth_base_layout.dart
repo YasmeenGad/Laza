@@ -53,18 +53,34 @@ class AuthBaseLayout extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          width: context.width,
-          height: 75.h,
-          decoration: BoxDecoration(
-            color: AppColors.kPrimaryColor,
-          ),
-          child: Center(
-              child: Text(
-            buttonText,
-            style:
-                AppTextStyles.medium17.copyWith(color: AppColors.kAlmostWhite),
-          )),
+        Column(
+          spacing: 25.h,
+          children: [
+            RichText(
+                text: TextSpan(children: [
+                  TextSpan(
+                      text: 'Already have an account?',
+                      style: AppTextStyles.regular15
+                          .copyWith(color: AppColors.kSecondaryColor)),
+                  TextSpan(
+                      text: 'Signin',
+                      style: AppTextStyles.medium15
+                          .copyWith(color: AppColors.kBlackColor)),
+                ])),
+            Container(
+              width: context.width,
+              height: 75.h,
+              decoration: BoxDecoration(
+                color: AppColors.kPrimaryColor,
+              ),
+              child: Center(
+                  child: Text(
+                    buttonText,
+                    style: AppTextStyles.medium17
+                        .copyWith(color: AppColors.kAlmostWhite),
+                  )),
+            ),
+          ],
         )
       ],
     );
