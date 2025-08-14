@@ -10,10 +10,12 @@ class AuthBaseLayout extends StatelessWidget {
       {super.key,
       required this.title,
       required this.buttonText,
-      required this.body});
+      required this.body,
+      this.footerPrompt});
 
   final String title, buttonText;
   final Widget body;
+  final Widget? footerPrompt;
 
   @override
   Widget build(BuildContext context) {
@@ -56,29 +58,19 @@ class AuthBaseLayout extends StatelessWidget {
         Column(
           spacing: 25.h,
           children: [
-            RichText(
-                text: TextSpan(children: [
-                  TextSpan(
-                      text: 'Already have an account?',
-                      style: AppTextStyles.regular15
-                          .copyWith(color: AppColors.kSecondaryColor)),
-                  TextSpan(
-                      text: 'Signin',
-                      style: AppTextStyles.medium15
-                          .copyWith(color: AppColors.kBlackColor)),
-                ])),
+            if (footerPrompt != null) footerPrompt!,
             Container(
               width: context.width,
               height: 75.h,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: AppColors.kPrimaryColor,
               ),
               child: Center(
                   child: Text(
-                    buttonText,
-                    style: AppTextStyles.medium17
-                        .copyWith(color: AppColors.kAlmostWhite),
-                  )),
+                buttonText,
+                style: AppTextStyles.medium17
+                    .copyWith(color: AppColors.kAlmostWhite),
+              )),
             ),
           ],
         )
