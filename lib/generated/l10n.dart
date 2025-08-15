@@ -64,6 +64,81 @@ class S {
       args: [],
     );
   }
+
+  /// `Let's get started`
+  String get letsGetStarted {
+    return Intl.message(
+      'Let\'s get started',
+      name: 'letsGetStarted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an account`
+  String get createAnAccount {
+    return Intl.message(
+      'Create an account',
+      name: 'createAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account?',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signin`
+  String get signIn {
+    return Intl.message('Signin', name: 'signIn', desc: '', args: []);
+  }
+
+  /// `Create your individual & unique style and look amazing everyday.`
+  String get createYourIndividualUniqueStyleAndLookAmazingEveryday {
+    return Intl.message(
+      'Create your individual & unique style and look amazing everyday.',
+      name: 'createYourIndividualUniqueStyleAndLookAmazingEveryday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get getStarted {
+    return Intl.message('Get Started', name: 'getStarted', desc: '', args: []);
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
+
+  /// `Twitter`
+  String get twitter {
+    return Intl.message('Twitter', name: 'twitter', desc: '', args: []);
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message('Google', name: 'google', desc: '', args: []);
+  }
+
+  /// `Choose Language`
+  String get chooseLanguage {
+    return Intl.message(
+      'Choose Language',
+      name: 'chooseLanguage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -78,10 +153,8 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   @override
   bool isSupported(Locale locale) => _isSupported(locale);
-
   @override
   Future<S> load(Locale locale) => S.load(locale);
-
   @override
   bool shouldReload(AppLocalizationDelegate old) => false;
 

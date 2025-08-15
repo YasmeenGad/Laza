@@ -4,6 +4,7 @@ import 'package:laza/features/onBoardingView/presentation/widgets/social_auth_bu
 
 import '../../../../core/styles/app_colors.dart';
 import '../../../../generated/assets.dart';
+import '../../../../generated/l10n.dart';
 
 class SocialAuthSection extends StatelessWidget {
   const SocialAuthSection({super.key});
@@ -14,18 +15,18 @@ class SocialAuthSection extends StatelessWidget {
       spacing: 10.h,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SocialAuthButton(
-          text: 'Facebook',
+        SocialAuthButton(
+          text: S.of(context).facebook,
           logo: Assets.imagesFacebook,
           clr: AppColors.kBlueColor,
         ),
-        const SocialAuthButton(
-          text: 'Twitter',
+        SocialAuthButton(
+          text: S.of(context).twitter,
           logo: Assets.imagesTwitter,
           clr: AppColors.kTwitterBlue,
         ),
-        const SocialAuthButton(
-          text: 'Google',
+        SocialAuthButton(
+          text: S.of(context).google,
           logo: Assets.imagesGoogle,
           clr: AppColors.kRedColor,
         ),

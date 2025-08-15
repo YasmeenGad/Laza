@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/generated/l10n.dart';
+import 'package:provider/provider.dart';
 
+import '../../localization/locale_provider.dart';
 import '../../styles/app_colors.dart';
 import '../../styles/app_text_styles.dart';
 
@@ -35,7 +38,7 @@ class LanguageBottomSheet extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Text(
-            "Choose Language",
+            S.of(context).chooseLanguage,
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
@@ -71,8 +74,14 @@ void showLanguageSelector(BuildContext context) {
     context: context,
     backgroundColor: Colors.transparent,
     builder: (_) => LanguageBottomSheet(
-      onEnglishSelected: () {},
-      onArabicSelected: () {},
+      onEnglishSelected: () {
+        context.read<LocaleProvider>().setLocale(Locale('en'));
+        Navigator.pop(context);
+      },
+      onArabicSelected: () {
+        context.read<LocaleProvider>().setLocale(Locale('ar'));
+        Navigator.pop(context);
+      },
     ),
   );
 }

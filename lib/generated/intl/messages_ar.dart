@@ -21,10 +21,24 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+          "هل لديك حساب؟",
+        ),
+        "chooseLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
+        "createAnAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "createYourIndividualUniqueStyleAndLookAmazingEveryday":
+            MessageLookupByLibrary.simpleMessage(
+          "إنشاء شخصية ومميزة وتبدو رائعة كل يوم.",
+        ),
+        "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+        "google": MessageLookupByLibrary.simpleMessage("جوجل"),
+        "letsGetStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "lookGoodFeelGood": MessageLookupByLibrary.simpleMessage(
           "أنظر كيف تبدو وكيف تشعر",
         ),
+        "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "twitter": MessageLookupByLibrary.simpleMessage("تويتر"),
       };
 }

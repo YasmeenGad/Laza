@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laza/core/config/media_query_config.dart';
+import 'package:provider/provider.dart';
 
+import 'core/localization/locale_provider.dart';
 import 'core/routes/app_routes.dart';
 import 'core/routes/route_names.dart';
 import 'core/styles/app_colors.dart';
@@ -19,7 +21,7 @@ class Laza extends StatelessWidget {
             kIsWeb ? Size(context.width, context.height) : const Size(375, 812),
         minTextAdapt: true,
         child: MaterialApp(
-            locale: Locale('ar'),
+            locale: context.watch<LocaleProvider>().locale,
             localizationsDelegates: [
               S.delegate,
               GlobalMaterialLocalizations.delegate,
