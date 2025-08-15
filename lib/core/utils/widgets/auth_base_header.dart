@@ -29,7 +29,10 @@ class AuthBaseHeader extends StatelessWidget {
                     color: AppColors.kLightGreyColor,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.arrow_back),
+                  child: InkWell(
+                      onTap: () => Navigator.pop(context),
+                      child: const Icon(Icons.arrow_back)
+                  ),
                 ),
                 if (showLanguageIcon == true)
                   IconButton(
