@@ -37,6 +37,6 @@ class Laza extends StatelessWidget {
               );
             },
             initialRoute: RouteNames.onBoardingView,
-            routes: AppRoutes.getRoutes()));
+            onGenerateRoute: AppRoutes.onGenerateRoute));
   }
 }
