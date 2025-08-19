@@ -10,9 +10,10 @@ class Assets {
       'assets/fonts/Inter_18pt-Regular.ttf';
   static const String fontsInter18ptSemiBold =
       'assets/fonts/Inter_18pt-SemiBold.ttf';
-  static const String imagesFacebook = 'assets/images/Facebook.svg';
-  static const String imagesGoogle = 'assets/images/Google.svg';
+  static const String imagesFacebook = 'assets/images/Facebook.png';
+  static const String imagesGoogle = 'assets/images/Google.png';
   static const String imagesLogo = 'assets/images/Logo.png';
   static const String imagesManLogo = 'assets/images/manLogo.png';
   static const String imagesOnBoarding = 'assets/images/onBoarding.png';
+  static const String imagesTwitter = 'assets/images/Twitter.png';
 }

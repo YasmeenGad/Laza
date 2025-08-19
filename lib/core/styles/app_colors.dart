@@ -11,4 +11,5 @@ class AppColors {
   static const Color kWhiteColor = Color(0xFFFFFFFF);
   static const Color kSunsetOrangeColor = Color(0xFFFF5757);
   static const Color kBlueColor = Color(0xFF4267B2);
+  static const Color kTwitterBlue = Color(0xFF1DA1F2);
 }
