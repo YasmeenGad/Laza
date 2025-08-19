@@ -25,6 +25,7 @@ dependencies:
   injectable:
   get_it:
   animations: ^2.0.11
+  firebase_auth: ^6.0.1
 
 dev_dependencies:
   flutter_test:
