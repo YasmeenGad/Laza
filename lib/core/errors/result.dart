@@ -9,7 +9,7 @@ class Success<T> implements Result<T> {
 }
 
 class Error<T> implements Result<T> {
-  final Failure message;
+  final Failure failure;
 
-  Error(this.message);
+  Error(this.failure);
 }

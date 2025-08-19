@@ -11,6 +11,8 @@ class AuthFailureMapper {
         return const EmailAlreadyInUse();
       case 'weak-password':
         return const WeakPassword();
+      case 'network-request-failed':
+        return const NetworkFailure();
       default:
         return const UnknownFailure();
     }

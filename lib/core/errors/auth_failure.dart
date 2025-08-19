@@ -8,6 +8,10 @@ class InvalidEmail extends AuthFailure {
   const InvalidEmail() : super('Invalid email');
 }
 
+class AuthCanceled extends AuthFailure {
+  const AuthCanceled() : super('Sign-in was canceled by user');
+}
+
 class WeakPassword extends AuthFailure {
   const WeakPassword() : super('Weak password');
 }
