@@ -15,22 +15,18 @@ class AuthOnlineDataSourceImpl implements AuthOnlineDataSource {
 
   @override
   Future<GoogleUserEntity> signInWithGoogle() async {
-    final GoogleSignInAccount googleUser =
+    final GoogleSignInAccount? googleUser =
         await GoogleSignIn.instance.authenticate();
+    if (googleUser == null) throw Exception('sign-in-cancelled');
+
     final GoogleSignInAuthentication googleAuth = googleUser.authentication;
 
     final credential = GoogleAuthProvider.credential(
       idToken: googleAuth.idToken,
     );
 
-    await _firebaseAuth.signInWithCredential(credential);
-    return AuthMapper.toGoogleUserEntity(
-      GoogleUserDto(
-        uid: googleUser.id,
-        displayName: googleUser.displayName,
-        email: googleUser.email,
-        photoUrl: googleUser.photoUrl,
-      ),
-    );
+    final userCredential = await _firebaseAuth.signInWithCredential(credential);
+    final user = userCredential.user!;
+    return AuthMapper.toGoogleUserEntity(GoogleUserDto.fromFirebaseUser(user));
   }
 }
