@@ -17,6 +17,7 @@ class AuthOnlineDataSourceImpl implements AuthOnlineDataSource {
   Future<GoogleUserEntity> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser =
         await GoogleSignIn.instance.authenticate();
+
     if (googleUser == null) throw Exception('sign-in-cancelled');
 
     final GoogleSignInAuthentication googleAuth = googleUser.authentication;
