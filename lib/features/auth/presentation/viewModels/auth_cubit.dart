@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:injectable/injectable.dart';
 import 'package:laza/features/auth/domain/use_cases/sign_in_with_google_usecase.dart';
 import 'package:laza/features/auth/presentation/viewModels/auth_action.dart';
 import 'package:meta/meta.dart';
@@ -9,6 +10,7 @@ import '../../domain/entities/google_user_entity.dart';
 
 part 'auth_state.dart';
 
+@injectable
 class AuthCubit extends Cubit<AuthState> {
   final SignInWithGoogleUseCase _googleUseCase;
 
