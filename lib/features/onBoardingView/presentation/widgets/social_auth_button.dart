@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laza/core/config/media_query_config.dart';
 
-import '../../../../core/styles/app_colors.dart';
-import '../../../../core/styles/app_text_styles.dart';
-
 class SocialAuthButton extends StatelessWidget {
   const SocialAuthButton(
       {super.key,
-      required this.text,
+      required this.widget,
       required this.logo,
       required this.clr,
       this.onTap});
 
-  final String text, logo;
+  final String logo;
+  final Widget widget;
   final Color clr;
   final void Function()? onTap;
 
@@ -36,11 +34,7 @@ class SocialAuthButton extends StatelessWidget {
               width: 22.h,
               height: 22.h,
             ),
-            Text(
-              text,
-              style:
-                  AppTextStyles.medium17.copyWith(color: AppColors.kWhiteColor),
-            )
+            widget,
           ],
         ),
       ),
